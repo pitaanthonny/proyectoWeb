@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+</head>
+<body>
+  <div id="contenedor">
+    <!-- El contenido cargado se mostrará aquí -->
+  </div>
+  <h1>Carrito de Compras</h1>
+  
+  <div id="productos">
+    <!-- Aquí se mostrarán los productos del carrito -->
+  </div>
+
+  <button id="cargarProductos">Cargar Productos</button>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Recuperar productos del caché (si existen)
+      const storedProductosPedido = localStorage.getItem("productosPedido");
+      if (storedProductosPedido) {
+        const productosPedido = JSON.parse(storedProductosPedido);
+        // Mostrar los productos en la página
+        const productosDiv = $("#productos");
+        productosPedido.forEach(producto => {
+          const productoDiv = $("<div>").text(producto.nombre); // Ajusta esto según tu estructura de producto
+          productosDiv.append(productoDiv);
+        });
+      }
+      
+      $("#cargarProductos").click(function() {
+        // Tu lógica para cargar productos al carrito
+      });
+    });
+  </script>
+  <script src="javascript/cargar.js"></script>
+</body>
+</html>

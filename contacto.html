@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flor de Loto</title>
+  <link rel="stylesheet" href="Estilos/css.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <link href="Estilos/forms.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+<body>
+  <div id="contenedor">
+    <!-- El contenido cargado se mostrará aquí -->
+  </div>
+  <br><br><br>
+  <br><br><br>
+  <main class="mainContacto">
+
+    <article id="contacto">
+      <h1>Contacto</h1>
+
+      <form class="contact_form" id="contact_form" action="https://formspree.io/f/maygeebd" method="POST">
+
+        <div>
+
+          <ul>
+            <li>
+              <label for="name">Nombre Completo:</label>
+              <input type="text" name="Nombre" placeholder="Elsi Garro Mata" id="Nombre" />
+            </li>
+
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" name="Email" placeholder="egarrom@utn.com" required=required />
+              <span class="form_hint">Formato correcto: "name@something.com"</span>
+            </li>
+
+            <li>
+              <label for="fnace">Fecha de Nacimiento:</label>
+              <input type="date" name="Fecha Nacimiento" id="FechaNacimiento" placeholder="17/8/1985"
+                required=required />
+              <span class="form_hint">Formato correcto: "dd/mm/yyyy"</span>
+            </li>
+
+            <input type="text" id="edad" name="Edad" readonly>
+
+            <li>
+              <label for="genero">Género:</label><br>
+              <input type="radio" name="Género" value="Masculino" checked> Masculino <br>
+              <input type="radio" name="Género" value="Femenino"> Femenino <br>
+            </li>
+
+            <li>
+              <label for="grado">Grado Académico:</label>
+              <input type="checkbox" name="Grado" value="primariaIncompleta" checked> Primaria Incompleta
+              <input type="checkbox" name="Grado" value="primariaCompleta">Primaria Completa
+              <input type="checkbox" name="Grado" value="SecundariaIncompleta">Secundaria Incompleta
+              <input type="checkbox" name="Grado" value="SecundariaCompleta">Secundaria Completa
+              <input type="checkbox" name="Grado" value="Diplomado">Diplomado
+              <input type="checkbox" name="Grado" value="Bachillerato">Bachillerato
+              <input type="checkbox" name="Grado" value="Licenciatura">Licenciatura
+              <input type="checkbox" name="Grado" value="Doctorado">Doctorado
+
+            </li>
+
+            <li>
+              <label for="Provincia">Provincia:</label>
+              <select id="Provincia" name="Provincia">
+                <option value="" disabled selected>Seleccione una provincia</option>
+              </select>
+            </li>
+
+            <button type="submit" class="submit" id="enviarDatos" onclick="validar()">Enviar Datos</button>
+          </ul>
+        </div>
+      </form>
+
+    </article>
+
+    <br><br><br>
+    <aside id="imagenaside">
+      <img clas="imgcuestionario" src="img/_DSC0137.jpg" alt="">
+    </aside>
+  </main>
+  <br><br><br>
+  <div class="info">
+    <div class="entregas">
+      <p>Nuestras entregas se realizan de la siguiente manera:</p>
+    </div>
+    <br><br><br>
+
+    <div class="ubicacion">
+      <h1>Ubicación</h1>
+      <p>Guanacaste</p>
+    </div>
+
+    <div class="mapa">
+      <h1>Estamos Ubicados</h1>
+      <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1004374.6106732663!2d-86.01901148041192!3d10.473973010987413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f757d2a8a1c08e5%3A0xe1081082012af945!2sProvincia%20de%20Guanacaste!5e0!3m2!1ses!2scr!4v1689640741138!5m2!1ses!2scr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <div class="mapa-contenido">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7849.738486476032!2d-85.07744747511724!3d10.352338748494768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9ff1b3f2b66f03%3A0x5a10501b735c6183!2sProvincia%20de%20Guanacaste%2C%20San%20Miguel!5e0!3m2!1ses!2scr!4v1692230559135!5m2!1ses!2scr" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <img clas="imgcuestionario" src="img/zyro-image.png" alt="">
+    <p><a href="index.html">Home</a> | <a href="#">About</a> | <a href="#">Services</a> | <a href="#">Acerca de
+        Nosostros</a></p>
+    <p class="derechos">Copyright &copy; <a href="#">Flor de Loto</a></p>
+
+  </footer>
+  <script src="javascript/validaciones.js"></script>
+  <script src="javascript/cargar.js"></script>
+</body>
+
+</html>
